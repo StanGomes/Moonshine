@@ -20,13 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
+    //just a commit test
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String apiKey = "91aa6458ac098dc8ae421cbda8510785";
-        double latitude = 37.8267;
-        double longitude = -122.4233;
+        double latitude = 45.3167088;
+        double longitude = -75.83175890000001;
         String forecastUrl = "https://api.darksky.net/forecast/"+ apiKey +"/"+ latitude +","+longitude;
 
         if (isNetworkAvailable()) {
