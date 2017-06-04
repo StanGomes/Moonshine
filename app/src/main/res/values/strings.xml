@@ -1,8 +1,0 @@
-<resources>
-    <string name="api_key">91aa6458ac098dc8ae421cbda8510785</string>
-    <string name="app_name">Moonshine</string>
-    <string name="error_title">Oops!</string>
-    <string name="error_message">There was an error.</string>
-    <string name="error_ok">Ok</string>
-    <string name="time_string">The weather at ? is</string>
-</resources>
