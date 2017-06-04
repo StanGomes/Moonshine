@@ -11,7 +11,7 @@
         android:id="@+id/temp_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12"
+        android:text="---"
         android:textAlignment="textStart"
         android:textColor="@android:color/white"
         android:textSize="150sp"
@@ -19,7 +19,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="12" />
+        tools:text=" "
+        android:gravity="start" />
 
     <ImageView
         android:id="@+id/degree_imageView"
@@ -29,7 +30,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/temp_textView"
         app:layout_constraintTop_toTopOf="@+id/temp_textView"
-        app:srcCompat="@drawable/degree" />
+        app:srcCompat="@drawable/degree"
+        android:layout_marginLeft="0dp" />
 
     <TextView
         android:id="@+id/time_textView"
@@ -38,18 +40,18 @@
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
-        android:text="The current temperature is"
+        android:gravity="start"
+        android:text="...."
         android:textAlignment="textStart"
         android:textColor="@color/OpaqueWhite"
-        android:textSize="22sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/temp_textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:gravity="start" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/location_textView"
@@ -99,7 +101,7 @@
 
     <LinearLayout
         android:id="@+id/horizontal_linear"
-        android:layout_width="0"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"
         android:layout_marginEnd="32dp"
@@ -112,14 +114,17 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/temp_textView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:id="@+id/vertical_linear1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginRight="32dp">
 
             <TextView
                 android:id="@+id/windspeed_label"
@@ -134,9 +139,8 @@
                 android:id="@+id/windspeed_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="1.4"
+                android:text="---"
                 android:textColor="@android:color/background_light"
                 android:textSize="24sp" />
 
@@ -163,7 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="70%"
+                android:text="---"
                 android:textColor="@android:color/background_light"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -172,20 +176,36 @@
 
     <TextView
         android:id="@+id/summary_textView"
-        android:layout_width="0"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="0dp"
         android:gravity="center_horizontal"
-        android:text="Heavy chance of rain. Dont forget your umbrella!"
+        android:paddingEnd="32dp"
+        android:paddingStart="32dp"
+        android:text="retrieving the weather..."
         android:textColor="@color/OpaqueWhite"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontal_linear"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_linear" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:indeterminate="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/location_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

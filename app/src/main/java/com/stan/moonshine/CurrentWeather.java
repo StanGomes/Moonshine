@@ -90,24 +90,24 @@ public class CurrentWeather {
         mTime = time;
     }
 
-    public double getTemp() {
-        return mTemp;
+    public int getTemp() {
+        return (int) Math.round(mTemp);
     }
 
     public void setTemp(double temp) {
         mTemp = temp;
     }
 
-    public double getWindSpeed() {
-        return mWindSpeed;
+    public int getWindSpeed() {
+        return (int) Math.round(mWindSpeed);
     }
 
     public void setWindSpeed(double windSpeed) {
         mWindSpeed = windSpeed;
     }
 
-    public double getPrecipChance() {
-        return mPrecipChance;
+    public int getPrecipChance() {
+        return (int) Math.round(mPrecipChance*100);
     }
 
     public void setPrecipChance(double precipChance) {
