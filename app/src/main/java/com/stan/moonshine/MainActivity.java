@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         currentWeather.setTime(currently.getLong("time"));
         currentWeather.setIcon(currently.getString("icon"));
-        currentWeather.setHumidity(currently.getDouble("humidity"));
+        currentWeather.setWindSpeed(currently.getDouble("windSpeed"));
         currentWeather.setTemp(currently.getDouble("temperature"));
         currentWeather.setPrecipChance(currently.getDouble("precipProbability"));
         currentWeather.setSummary(currently.getString("summary"));

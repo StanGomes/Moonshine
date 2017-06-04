@@ -14,7 +14,7 @@ public class CurrentWeather {
 
     private String mIcon;
     private long mTime;
-    private double mTemp, mHumidity, mPrecipChance;
+    private double mTemp, mWindSpeed, mPrecipChance;
     private String mSummary;
     private String mTimeZone;
 
@@ -98,12 +98,12 @@ public class CurrentWeather {
         mTemp = temp;
     }
 
-    public double getHumidity() {
-        return mHumidity;
+    public double getWindSpeed() {
+        return mWindSpeed;
     }
 
-    public void setHumidity(double humidity) {
-        mHumidity = humidity;
+    public void setWindSpeed(double windSpeed) {
+        mWindSpeed = windSpeed;
     }
 
     public double getPrecipChance() {
