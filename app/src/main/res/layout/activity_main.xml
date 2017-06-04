@@ -41,7 +41,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:gravity="start"
-        android:text="...."
+        android:text="@string/temp"
         android:textAlignment="textStart"
         android:textColor="@color/OpaqueWhite"
         android:textSize="16sp"
@@ -61,7 +61,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Ottawa, ON"
+        android:text="@string/ottawa_on"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/time_textView"
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:gravity="center_horizontal"
-                android:text="Wind Speed"
+                android:text="@string/wind_speed"
                 android:textColor="@color/OpaqueWhite" />
 
             <TextView
@@ -140,7 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="---"
+                android:text="@string/wind"
                 android:textColor="@android:color/background_light"
                 android:textSize="24sp" />
 
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:gravity="center_horizontal"
-                android:text="Rain"
+                android:text="@string/rain"
                 android:textColor="@color/OpaqueWhite" />
 
             <TextView
@@ -167,7 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="---"
+                android:text="@string/precip"
                 android:textColor="@android:color/background_light"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -182,7 +182,7 @@
         android:gravity="center_horizontal"
         android:paddingEnd="32dp"
         android:paddingStart="32dp"
-        android:text="retrieving the weather..."
+        android:text="@string/retrieving_the_weather"
         android:textColor="@color/OpaqueWhite"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
